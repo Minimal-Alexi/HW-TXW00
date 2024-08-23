@@ -1,0 +1,1 @@
+This file contains parts of the homework for week 1 and beyond. Certain exercises may have been lost and replaced along the line.
