@@ -1,0 +1,33 @@
+h3 {
+  text-align: center;
+}
+/* Base styles for all div elements */
+div {
+  display: flex;
+  align-items: center; /* Align items horizontally in the center by default */
+  border: 2px solid #000; /* Adds a 2px solid black border */
+  padding: 10px; /* Adds some space inside the div, between the content and the border */
+  border-radius: 8px; /* Rounds the corners of the border */
+  flex-direction: row; /* Default direction is row */
+}
+
+/* Styles specifically for div elements with the class 'main' */
+.main {
+  flex-direction: column; /* Aligns items vertically (downwards) */
+  align-items: flex-start; /* Aligns items to the start of the cross-axis */
+  gap:15px;
+}
+
+.child
+{
+  border: 0px;
+  align-items: flex-start;
+  flex-direction: row; /* Default direction is row */
+  gap:5px;
+}
+
+img
+{
+  max-width: 150px; /* Adjust size as needed */
+  margin-right: 20px; /* Space between image and text */
+}
