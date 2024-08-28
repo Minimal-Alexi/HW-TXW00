@@ -1,0 +1,43 @@
+.CreditCard {
+    width: 300px; /* Adjust width as needed */
+    height: 180px; /* Adjust height as needed */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width/height calculations */
+    font-family: Arial, sans-serif; /* Font style */
+    position: relative; /* For positioning internal elements */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    
+}
+
+.CreditCard img {
+    width: 50px; /* Adjust logo size */
+    height: auto;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.CreditCard p {
+    margin: 0;
+}
+
+.CreditCard .number {
+    margin-top: 20px;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+
+.CreditCard .expiration {
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.CreditCard .owner {
+    font-size: 0.8em;
+    margin-top: 5px;
+}

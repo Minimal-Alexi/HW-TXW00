@@ -1,0 +1,11 @@
+.rectangle {
+    width: 400px; /* Increased width of the rectangle */
+    height: 200px; /* Increased height of the rectangle */
+    border: 2px solid black; /* Border style */
+    display: flex; /* Flexbox for centering text */
+    align-items: center; /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
+    font-size: 20px; /* Font size of the text */
+    text-align: center; /* Center text alignment */
+    margin: 20px; /* Margin around the rectangle */
+}
