@@ -3,7 +3,7 @@ const User = require("../Models/userModel");
 
 const SECRET = process.env.SECRET
 
-const createToken = (_id) => {
+const generateToken = (_id) => {
   return jwt.sign({ _id }, SECRET, { expiresIn: '3d' });
 }
 
@@ -31,6 +31,7 @@ const requireAuth = async (req, res, next) => {
 
 module.exports =
 {
-  createToken,
-  requireAuth
+    
+    generateToken,
+    requireAuth
 }

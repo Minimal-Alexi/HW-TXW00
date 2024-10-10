@@ -8,7 +8,7 @@ const {
   deleteCourse,
 } = require("../Controllers/courseController");
 
-const {requireAuth} = require("../Middleware/jwtHandling")
+const {requireAuth} = require("../config/jwtHandling")
 
 
 router.get("/", getAllCourses);
