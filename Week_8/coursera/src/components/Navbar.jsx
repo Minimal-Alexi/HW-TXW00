@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
 import LoadingSpinner from "./LoadingSpinner";
 import { useContext } from "react";
-import ThemeContext from '../Context/ThemeContext';
-import AuthContext from "../Context/AuthContext";
+import AuthContext from "../contexts/AuthContext";
 
 const Navbar = () => {
-  const { toggleTheme } = useContext(ThemeContext);
   const { isAuthenticated, clearUser, username, isLoading } = useContext(AuthContext);
 
   const handleClick = (e) => {
@@ -23,7 +21,7 @@ const Navbar = () => {
       <div className="links">
         {isAuthenticated ? (
           <div>
-            <Link to="/courses/add-job">Add Job</Link>
+            <Link to="/courses/add-course">Add Course</Link>
             {username && <span>{username}</span>}
             <button onClick={handleClick}>Log out</button>
           </div>
@@ -34,7 +32,6 @@ const Navbar = () => {
           </div>
         )}
       </div>
-      <button onClick={toggleTheme}>Toggle</button>
     </nav>
   );
 };

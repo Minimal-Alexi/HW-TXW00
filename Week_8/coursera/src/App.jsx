@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AuthProvider from "./Context/AuthProvider";
+import AuthProvider from "./contexts/AuthProvider";
 import RouteGuard from "./components/RouteGuard";
 
 // Pages & Components
 import Navbar from "./components/Navbar";
 import Home from "./pages/HomePage";
-import AddJobPage from "./pages/AddJobPage";
-import JobPage from "./pages/JobPage";
-import EditJobPage from "./pages/EditJobPage";
+import AddCoursePage from "./pages/AddCoursePage";
+import CoursePage from "./pages/CoursePage";
+import EditCoursePage from "./pages/EditCoursePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -21,20 +21,20 @@ const App = () => {
             <div className="content">
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/courses/:id" element={<JobPage />} />
+                <Route path="/courses/:id" element={<CoursePage />} />
                 <Route
-                  path="/courses/add-job"
+                  path="/courses/add-course"
                   element={
                     <RouteGuard requireAuth={true}>
-                      <AddJobPage />
+                      <AddCoursePage />
                     </RouteGuard>
                   }
                 />
                 <Route
-                  path="/edit-job/:id"
+                  path="/edit-course/:id"
                   element={
                     <RouteGuard requireAuth={true}>
-                      <EditJobPage />
+                      <EditCoursePage />
                     </RouteGuard>
                   }
                 />

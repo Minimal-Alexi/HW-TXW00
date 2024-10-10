@@ -2,7 +2,7 @@ import useField from "../hooks/useField";
 import useSignup from "../hooks/useSignup";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import AuthContext from "../Context/AuthContext";
+import AuthContext from "../contexts/AuthContext";
 
 const Signup = () => {
   const navigate = useNavigate();

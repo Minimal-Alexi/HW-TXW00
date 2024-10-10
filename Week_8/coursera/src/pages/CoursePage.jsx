@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useContext } from "react";
-import AuthContext from "../Context/AuthContext";
+import AuthContext from "../contexts/AuthContext";
 
 const CoursePage = () => {
   const navigate = useNavigate();
@@ -76,11 +76,11 @@ const CoursePage = () => {
       ) : (
         <>
           <h2>{course.title}</h2>
-          <p>Type: {course.type}</p>
-          <p>Description: {course.description}</p>
-          <p>Company: {course.company.name}</p>
-          <p>Email: {course.company.contactEmail}</p>
-          <p>Phone: {course.company.contactPhone}</p>
+          <p>Duration: {course.duration}</p>
+          <p>Fee: ${course.fee}</p>
+          <p>Instructor: {course.instructor.name}</p>
+          <p>Email: {course.instructor.contactEmail}</p>
+          <p>Phone: {course.instructor.contactPhone}</p>
 
           {isAuthenticated && (
             <>

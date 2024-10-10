@@ -2,7 +2,7 @@ import useField from "../hooks/useField";
 import useLogin from "../hooks/useLogin";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import AuthContext from "../Context/AuthContext";
+import AuthContext from "../contexts/AuthContext";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -14,7 +14,7 @@ const Login = () => {
 
   const handleFormSubmit = async (e) => {
       e.preventDefault();
-      const userData = await login({ email: username.value, password: password.value });
+      const userData = await login({ username: username.value, password: password.value });
 
       if (userData) {
           console.log("Login successful:", userData);
@@ -30,11 +30,11 @@ const Login = () => {
     <div className="create">
       <h2>Login</h2>
       <form onSubmit={handleFormSubmit}>
-      <label>Email address:</label>
+      <label>Username:</label>
         <input {...username} />
         <label>Password:</label>
         <input {...password} />
-        <button>Sign up</button>
+        <button>Log in</button>
       </form>
     </div>
   );
