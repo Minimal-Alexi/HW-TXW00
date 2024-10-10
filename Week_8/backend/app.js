@@ -7,6 +7,8 @@ require("dotenv").config();
 
 const logger = require("./Middleware/logger");
 const { unknownEndpoint, errorHandler } = require("./Middleware/errorHandling");
+const userRouter = require("./Routers/userRouter");
+const courseRouter = require("./Routers/courseRouter");
 
 // Middleware
 app.use(cors());
@@ -22,12 +24,8 @@ connectDB();
 
 // Routes
 
-
-
-
-// App
-
-
+app.use("/api/users",userRouter);
+app.use("/api/courses",courseRouter);
 
 
 // Error handling
