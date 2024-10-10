@@ -17,7 +17,7 @@ router.get("/:courseID", getCoursebyID);
 router.use(requireAuth)
 
 router.post("/", createCourse);
-router.put("/:courseID", updateCourse);
+router.patch("/:courseID", updateCourse);
 router.delete("/:courseID", deleteCourse);
 
 module.exports = router;

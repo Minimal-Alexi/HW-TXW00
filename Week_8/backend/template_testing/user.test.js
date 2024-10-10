@@ -2,7 +2,6 @@ const supertest = require('supertest');
 const app = require('../app');
 const bcrypt = require("bcrypt");
 const User = require('../Models/userModel');
-const { generateToken } = require('../config/jwtHandling');
 
 const api = supertest(app);
 
@@ -120,4 +119,8 @@ describe('User Controller', () => {
 
     });
 
+});
+
+afterAll(async () => {
+    await User.deleteMany({});
 });
